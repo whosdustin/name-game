@@ -2,7 +2,7 @@ require 'mongoid'
 require './models/verb'
 require './models/noun'
 #Check if in development,test or production mode
-Mongoid.load!('./mongoid.yml', :development)
+Mongoid.load!('./mongoid.yml')
 verbs = [
   "jumping", "running", "skipping", "hopping", "walking", "crawling", "bending",
   "swaying", "swinging", "shaking", "twisting", "galloping", "leaping",
