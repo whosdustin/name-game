@@ -6,12 +6,33 @@ html
     title Name Generator
     meta description="Need an idea to name your next app/game? Why not start here and randomly name it."
     link rel="stylesheet" media="screen, projection" href="/styles.css"
+		css:
+			.container {background: hsla(#{@hue}, 50%, 60%, 1)}
+			.display-1 {color: hsla(#{@hue}, 50%, 30%, 1)}
+			.btn {
+				background: hsla(#{@hue}, 50%, 30%, 1);
+				color: hsla(#{@hue}, 50%, 60%, 1);
+			}
+			.btn:hover {
+				background: hsla(#{@hue}, 50%, 30%, 0.6);
+				color: hsla(#{@hue}, 50%, 20%, 1);
+			}
+			footer{color: hsla(#{@hue}, 50%, 30%, 1);}
+			footer a { 
+				color: hsla(#{@hue}, 50%, 30%, 1); 
+				border-bottom-color: hsla(#{@hue}, 50%, 30%, 1); 
+			}
     /[if lt IE 9]
       script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
   body
-    == yield
-    footer
-      p Random Game Name Generator
-    script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"
-    script src="/js/analysjs.js"
-    javascript: analysjs.load('ZRemCsNTM0CFG0qGPSWxmiYjF2Kr4cMa');
+		== yield
+		
+		
+		footer
+			p
+				' Random game naming generator inspired by 
+				a href="https://itunes.apple.com/us/app/steve-jumping-dinosaur-widget/id1090617661?mt=8" Steve The jumping dinosaur
+		script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"
+		script src="/js/main.js"
+		script src="/js/analysjs.js"
+		javascript: analysjs.load('ZRemCsNTM0CFG0qGPSWxmiYjF2Kr4cMa');
