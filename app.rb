@@ -22,6 +22,7 @@ class App < Sinatra::Base
   get '/' do
     @rand_verb = Verb.all.pluck(:verb).sample
     @rand_noun = Noun.all.pluck(:noun).sample
+		@hue = rand(360);
     slim :index
   end
 
@@ -29,4 +30,5 @@ class App < Sinatra::Base
   get '/styles.css' do
     scss :styles
   end
+
 end
